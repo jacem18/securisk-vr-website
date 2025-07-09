@@ -1,198 +1,112 @@
-/* STYLE GÉNÉRAL */
+/* styles.css */
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(145deg, #f4f6f8, #ffffff);
-  color: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-/* HEADER */
 header {
-  background: #0d47a1;
+  background-color: #004080;
   color: white;
   padding: 1rem 2rem;
+}
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-header h1 {
-  font-size: 2rem;
-  animation: pop-in 1s ease;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
+  gap: 1rem;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* HERO SECTION */
 .hero {
-  background: url('https://images.unsplash.com/photo-1600267165696-e3d1d4d8494d') center/cover;
-  color: white;
+  background: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 6rem 2rem;
-  animation: fade-in 1.5s ease-out;
 }
 
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 8px;
+  color: #fff;
 }
 
-.hero .btn {
-  display: inline-block;
-  padding: 1rem 2rem;
-  margin-top: 1.5rem;
-  background: #ff9800;
+.btn {
+  background-color: #ff8800;
   color: white;
-  border-radius: 5px;
-  font-weight: bold;
+  padding: 0.8rem 1.5rem;
   text-decoration: none;
-  transition: transform 0.2s ease;
+  border-radius: 5px;
+  margin-top: 1rem;
+  display: inline-block;
+  font-weight: bold;
 }
 
-.hero .btn:hover {
-  transform: scale(1.05);
-}
-
-/* OFFRES */
-#offres {
-  padding: 4rem 2rem;
-  background: #f1f1f1;
+section {
+  padding: 2rem;
   text-align: center;
 }
 
 .pricing {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 2rem;
-  margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .offer {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-
-.offer:hover {
-  transform: scale(1.05);
-}
-
-.offer h3 {
-  color: #0d47a1;
-  margin-bottom: 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .offer button {
-  margin-top: 1rem;
-  padding: 0.7rem 1.5rem;
-  background: #0d47a1;
+  background-color: #004080;
   color: white;
   border: none;
-  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
   cursor: pointer;
-}
-
-.offer button:hover {
-  background: #1565c0;
-}
-
-/* SCÉNARIOS */
-#scenarios {
-  padding: 3rem 2rem;
-  background: #e3f2fd;
-}
-
-#scenarios h2 {
-  text-align: center;
-}
-
-#scenarios ul {
-  list-style: none;
-  padding: 0;
-  max-width: 600px;
-  margin: 2rem auto;
-}
-
-#scenarios li {
-  background: white;
-  margin: 0.5rem 0;
-  padding: 1rem;
-  border-left: 5px solid #0d47a1;
   border-radius: 5px;
-}
-
-/* CONTACT */
-#contact {
-  padding: 3rem 2rem;
-  text-align: center;
 }
 
 form {
-  max-width: 600px;
-  margin: 2rem auto;
   display: flex;
   flex-direction: column;
+  max-width: 400px;
+  margin: auto;
   gap: 1rem;
 }
 
-form input,
-form textarea {
-  padding: 0.8rem;
+input, textarea {
+  padding: 0.5rem;
   border-radius: 5px;
   border: 1px solid #ccc;
-  font-size: 1rem;
 }
 
-form button {
-  padding: 1rem;
-  background: #0d47a1;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-form button:hover {
-  background: #1976d2;
-}
-
-/* FOOTER */
 footer {
-  text-align: center;
-  padding: 2rem;
-  background: #0d47a1;
+  background-color: #004080;
   color: white;
-  margin-top: 3rem;
-}
-
-/* ANIMATIONS */
-@keyframes pop-in {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
