@@ -1,15 +1,31 @@
-/* styles.css */
-body {
+/* Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+}
+
+/* Palette dynamique */
+:root {
+  --primary: #FF5722;
+  --secondary: #1E2A78;
+  --background: #F5F5F5;
+  --text-dark: #222;
+  --text-light: #fff;
+}
+
+/* Structure */
+body {
+  background-color: var(--background);
+  color: var(--text-dark);
+  line-height: 1.6;
 }
 
 header {
-  background-color: #004080;
-  color: white;
-  padding: 1rem 2rem;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: var(--text-light);
+  padding: 20px 40px;
 }
 
 .navbar {
@@ -18,95 +34,185 @@ header {
   align-items: center;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
+.navbar h1 {
+  font-size: 1.8rem;
 }
 
-nav a {
-  color: white;
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.navbar a {
+  color: var(--text-light);
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
+.navbar a:hover {
+  color: #ffe5db;
+}
+
+/* Hero section */
 .hero {
-  background: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-  height: 70vh;
+  background-image: url('https://source.unsplash.com/1600x900/?construction,technology');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
-.hero .overlay {
+.overlay {
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 2rem;
-  border-radius: 8px;
-  color: #fff;
+  padding: 40px;
+  text-align: center;
+  color: var(--text-light);
+  border-radius: 12px;
+}
+
+.overlay h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
 .btn {
-  background-color: #ff8800;
-  color: white;
-  padding: 0.8rem 1.5rem;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
   text-decoration: none;
-  border-radius: 5px;
-  margin-top: 1rem;
-  display: inline-block;
-  font-weight: bold;
 }
 
-section {
-  padding: 2rem;
+.btn:hover {
+  background-color: #e64a19;
+}
+
+/* Offres */
+#offres {
+  padding: 60px 20px;
   text-align: center;
+  background-color: var(--background);
 }
 
 .pricing {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
 .offer {
-  background-color: #ffffff;
-  border: 1px solid #ccc;
+  background-color: #fff;
+  border: 2px solid var(--primary);
+  padding: 20px;
   border-radius: 12px;
-  padding: 1rem;
   width: 250px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.offer:hover {
+  transform: translateY(-5px);
+}
+
+.offer h3 {
+  color: var(--secondary);
+  margin-bottom: 10px;
 }
 
 .offer button {
-  background-color: #004080;
-  color: white;
+  background-color: var(--primary);
+  color: #fff;
   border: none;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
+  padding: 10px 16px;
+  border-radius: 6px;
   cursor: pointer;
-  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.offer button:hover {
+  background-color: #e64a19;
+}
+
+/* Scénarios */
+#scenarios {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+#scenarios ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+#scenarios li {
+  padding: 10px;
+  font-size: 1.1rem;
+}
+
+/* Contact */
+#contact {
+  padding: 60px 20px;
+  background-color: var(--background);
+  text-align: center;
 }
 
 form {
   display: flex;
   flex-direction: column;
   max-width: 400px;
-  margin: auto;
-  gap: 1rem;
+  margin: 0 auto;
+  gap: 15px;
 }
 
 input, textarea {
-  padding: 0.5rem;
-  border-radius: 5px;
+  padding: 10px;
+  border-radius: 6px;
   border: 1px solid #ccc;
 }
 
+button[type="submit"] {
+  background-color: var(--secondary);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #15205a;
+}
+
+/* Footer */
 footer {
-  background-color: #004080;
-  color: white;
+  background-color: var(--secondary);
+  color: var(--text-light);
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pricing {
+    flex-direction: column;
+    align-items: center;
+  }
 }
